@@ -5,16 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Vanguardia - {{rss.feed.title}}</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        .news-grid {
+            display: grid;
+            gap: 20px;
+        }
+        @media (min-width: 1200px) {
+            .news-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .news-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            .news-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 767px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
-    {% for item in rss.entries %}
-        <p>
-            <a href="{{item.link}}">{{item.title}}</a>
-            {% for media in item.media_content %}
-                <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
-            {% endfor %}
-        </p>
-    {% endfor %}
+    <div class="news-grid">
+        {% for item in rss.entries %}
+            <div class="news-item">
+                <a href="{{item.link}}"><h2>{{item.title}}</h2></a>
+                {% for media in item.media_content %}
+                    <img src="{{media.url}}" alt="{{item.title}}" />
+                {% endfor %}
+                <p>Descripció: {{item.descripcion}}</p>
+                <p>Data: {{item.published}}</p>
+                <p>Categoria: {{item.category}}</p>
+                <p>Autor: {{item.author}}</p>
+                <p>Última actualització: {{item.modified}}</p>
+            </div>
+        {% endfor %}
+    </div>
 </body>
 </html>
+
+

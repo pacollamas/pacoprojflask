@@ -92,3 +92,5 @@ def get_rss_lavanguardia(seccio):
     
     rss = feedparser.parse(xml)
     return rss
+
+
