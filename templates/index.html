@@ -5,77 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/style.css">
     <title>Diaris!</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <!-- Barra de navegació -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Diaris</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inici</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/lavanguardia/deportes">Deportes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/lavanguardia/politica">Política</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/lavanguardia/vida">Vida</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/lavanguardia/participacion">Participació</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/lavanguardia/gente">Gente</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-auto mx-lg-0" href="#">Diaris</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">&#9776;</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Inici</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lavanguardia/deportes">Deportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lavanguardia/politica">Política</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lavanguardia/vida">Vida</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lavanguardia/participacion">Participació</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lavanguardia/gente">Gente</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!-- Carousel d'imatges -->
-    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="/static/img/p1.png" class="d-block w-100" alt="Noticia 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Notícia 1</h5>
-                    <p>Descripció de la notícia 1.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/static/img/diaris.jpg" class="d-block w-100" alt="Noticia 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Notícia 2</h5>
-                    <p>Descripció de la notícia 2.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="/static/img/diaris.jpg" class="d-block w-100" alt="Noticia 3">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Notícia 3</h5>
-                    <p>Descripció de la notícia 3.</p>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+  <!-- Carousel -->
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
     </div>
     
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/static/img/diaris.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="/static/img/p1.png" alt="New York" class="d-block" style="width:100%">
+      </div>
+    </div>
+    
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+  
 </body>
 </html>
+
