@@ -1,6 +1,5 @@
 body {
     background-color: #527396;
-    font-family: Arial, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,35 +46,22 @@ a:hover {
     text-decoration: underline;
 }
 
-.news-item {
-    padding: 3px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 10px solid #dee2e6;
-}
 
-.news-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
 
 .news-item img {
     max-width: 100%;
     height: auto;
 }
 
-.card-title {
-    font-size: 1.25rem;
-    color: #007bff;
+.news-item {
+    padding: 3px;
+    border-radius: 10px;
+    border: 10px solid #dee2e6;
 }
 
-.card-text {
-    color: #000000;
-}
-
-.container h1 {
-    margin-bottom: 20px;
-    color: #000000;
+.news-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .container {
@@ -90,3 +76,19 @@ a:hover {
     color: #000000;
     transition: color 0.3s ease;
 }
+
+.card-title {
+    font-size: 1.25rem;
+    color: #007bff;
+}
+
+.card-text {
+    color: #000000;
+}
+
+.container h1 {
+    color: #000000;
+    margin-bottom: 20px;
+    
+}
+

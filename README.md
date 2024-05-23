@@ -1,5 +1,14 @@
-# RSS
-> RSS usado para generar la informacion de los xml de las paginas de la vannguardia descargados.
+# Tecnologias
+>Flask: Framework web de Python utilizado para construir la aplicación.
+>Bootstrap: Framework CSS que facilita la creación de interfaces web responsivas y modernas.
+>Feedparser: Librería Python utilizada para parsear feeds RSS 
+### index.html:
+- Navbar: Barra de navegación con enlaces a diferentes secciones del sitio (Inici, Deportes, Política, Vida, Participació, Gente).
+- Carousel: Carrusel de Bootstrap que muestra imágenes destacadas.
+### lavanguardia.html:
+- Navbar: Similar a la de index.html, pero con un título específico para "La Vanguardia".
+- RSS Feed Display: Muestra artículos del feed RSS de "La Vanguardia" utilizando tarjetas de Bootstrap. Cada tarjeta incluye la imagen, título, descripción, fecha, categoría, autor y última actualización del artículo.
+
 
 ### Se genera el cuerpo de la tarjeta (card-body) que contiene la informacion de los xml descargado de la vanguaridia:
 
@@ -17,15 +26,18 @@
 
 ![Alt text](image-1.png)
 
+## Bootstrap
+- Uso de bootstap
+```` 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+````
 #### Navbar
 - Utilización de la clase `.navbar` para la barra de navegación.
 - Implementación del botón de hamburguesa con la clase `.navbar-toggler`.
 - Alineación del contenido en la barra de navegación mediante clases de flexbox y alineación.
 
 ![Alt text](image.png)
-#### Contenedor Principal
-- Organización del contenido principal dentro de un contenedor de Bootstrap con la clase `.container`.
-- Personalización del fondo del contenedor principal utilizando el color `#527396`.
 
 #### Tarjetas (Cards)
 - Presentación de cada noticia dentro de una tarjeta de Bootstrap con la clase `.card`.
@@ -33,35 +45,10 @@
 - Aplicación de estilos personalizados para las tarjetas, incluyendo transiciones y efectos al pasar el cursor sobre ellas.
 
 #### Rejilla (Grid)
-- Empleo del sistema de rejilla de Bootstrap para organizar las tarjetas en filas y columnas.
+- Empleo del sistema de rejilla de Bootstrap para organizar las tarjetas en filas y columnas para organizar las noticias de la vanguardia.
 - Utilización de clases de tamaño de columna (`col-lg-3 col-md-6 col-sm-12 mb-1 pb-3`, etc.) para controlar el diseño responsivo de las tarjetas en diferentes tamaños de pantalla pasando de 4 a 2 y de 2 a 1. Y dejando un espaciado inferior entre las tarjetas.
 
-#### Otros Componentes de Bootstrap
-- Implementación de clases de Bootstrap para los enlaces de navegación, títulos, texto y botones.
-- Personalización de algunos estilos utilizando clases de Bootstrap y CSS personalizado.
+### Carousel
+-  Carrusel de Bootstrap que muestra imágenes destacadas.
+![alt text](image-2.png)
 
-El HTML utiliza Bootstrap para crear un diseño receptivo y estilizado para mostrar noticias utilizando RSS. Las clases y componentes de Bootstrap se han integrado de manera efectiva para lograr un diseño limpio y funcional.
-
-### Resumen del Uso de RSS en el HTML
-
-#### Integración de RSS
-- Utilización del formato de plantilla HTML junto con datos dinámicos de un feed RSS para mostrar noticias.
-- Generación dinámica de cada noticia mediante un bucle que recorre las entradas del feed RSS.
-
-#### Estructura de Noticias
-- Inclusión de elementos como título, descripción, fecha de publicación, categoría, autor y última actualización para cada noticia.
-- Utilización de HTML y plantillas de Python (posiblemente Flask o Django) para renderizar estos elementos.
-
-#### Enlaces y Multimedia
-- Incorporación de enlaces para acceder a la noticia completa mediante la etiqueta `<a>` de HTML.
-- Visualización de contenido multimedia, como imágenes, utilizando la etiqueta `<img>`.
-
-#### Estilos y Personalización
-- Aplicación de estilos CSS personalizados para dar formato y estilo a los elementos de la noticia, como los títulos, texto y contenedores.
-- Adición de efectos de transición y hover para mejorar la experiencia del usuario al interactuar con las noticias.
-
-#### Flexibilidad y Adaptabilidad
-- Diseño y estructura que permiten la adaptación a diferentes tamaños de pantalla y dispositivos mediante técnicas de diseño responsivo y el sistema de rejilla de Bootstrap.
-- Presentación estética y legible de las noticias, optimizando la experiencia del usuario.
-
-El HTML utiliza datos dinámicos de un feed RSS para mostrar noticias de manera estructurada y legible. Se han aplicado técnicas de diseño y estilos para crear una interfaz atractiva y funcional para el usuario.
